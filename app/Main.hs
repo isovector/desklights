@@ -7,7 +7,7 @@ import Data.Word
 import Data.Char (chr)
 
 scale :: RealFrac a => a -> a -> a -> (Int, Int, Int)
-scale r g b = (floor r', floor g', floor b')
+scale r g b = if a == 0 then (0,0,0) else (floor r', floor g', floor b')
   where
     a=r+g+b
     s=80/a
